@@ -1,22 +1,12 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace Con
+class Program
 {
-    internal class ass5
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(first_last("SABHYATA"));
-            Console.WriteLine(first_last("CHAUDHARY"));
-            Console.WriteLine(first_last("x"));
-        }
-        public static string first_last(string ustr)
-        {
-            return ustr.Length > 1
-                ? ustr.Substring(ustr.Length - 1) + ustr.Substring(1, ustr.Length - 2) + ustr.Substring(0, 1) : ustr;
-        }
+        int[] Arr = { 20, -10, -30, 0, 15, 10, 30 };
+        Console.WriteLine("Maximum Element : " + Arr.Max());
+        Console.WriteLine("Minimum Element : " + Arr.Min());
+        Console.Read();
     }
 }

@@ -2,19 +2,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApplication1
 {
-    internal class asst6
+    class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Current Date and Time is : ");
-            DateTime now = DateTime.Now;
-            Console.WriteLine(now);
-            Console.ReadLine();
-        }
+            int i       = 0;
+            int[] arr   = new int[5];
 
+            Console.WriteLine("Enter array elements : ");
+            for (i = 0; i < arr.Length; i++)
+            {
+                Console.Write("Element[" + (i + 1) + "]: ");
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("List of negative numbers : ");
+            for (i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < 0)
+                    Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }
